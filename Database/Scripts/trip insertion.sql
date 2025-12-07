@@ -49,7 +49,6 @@ INSERT INTO TRIP(trip_id, bus_id, departure_place, destination_place, trip_date,
 INSERT INTO TRIP(trip_id, bus_id, departure_place, destination_place, trip_date, departure_time) VALUES (48, 167, 'Butare', 'Ruhengeri', DATE '2025-12-11', '09:00');
 INSERT INTO TRIP(trip_id, bus_id, departure_place, destination_place, trip_date, departure_time) VALUES (49, 168, 'Ruhengeri', 'Gisenyi', DATE '2025-12-11', '10:00');
 INSERT INTO TRIP(trip_id, bus_id, departure_place, destination_place, trip_date, departure_time) VALUES (50, 169, 'Kigali', 'Gisenyi', DATE '2025-12-12', '08:00');
--- Continuing the pattern up to 201...
 INSERT INTO TRIP(trip_id, bus_id, departure_place, destination_place, trip_date, departure_time) VALUES (51, 170, 'Kigali', 'Butare', DATE '2025-12-12', '09:00');
 INSERT INTO TRIP(trip_id, bus_id, departure_place, destination_place, trip_date, departure_time) VALUES (52, 171, 'Kigali', 'Ruhengeri', DATE '2025-12-12', '10:00');
 INSERT INTO TRIP(trip_id, bus_id, departure_place, destination_place, trip_date, departure_time) VALUES (53, 172, 'Kigali', 'Kibuye', DATE '2025-12-12', '11:00');
