@@ -29,5 +29,8 @@ Emergency response is delayed due to missing, inaccurate, or disorganized data.
  Oracle Database 21c
  Docker container
  SQL Developer
+
+ Links to documentation:
  
+ Database
  
