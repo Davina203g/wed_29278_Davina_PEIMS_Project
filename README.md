@@ -38,4 +38,5 @@ Link to queries:
 
 Queries
 
-Link to screenshots:
+Link to database objects and test results screenshots:
+https://github.com/Davina203g/wed_29278_Davina_PEIMS_Project/tree/85da57b405b4f006db5c53f55f724443592e1c44/Screenshoots
