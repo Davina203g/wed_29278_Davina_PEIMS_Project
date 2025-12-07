@@ -22,13 +22,14 @@ CREATE TABLE EMERGENCY_CONTACT (
     );
 
 -- Trip table creation
-CREATE TABLE EMERGENCY_CONTACT (
-   contact_id NUMBER(10) PRIMARY KEY,
-   passenger_id NUMBER(10) REFERENCES PASSENGER(passenger_id),
-   contact_name VARCHAR2(200),
-   relationship VARCHAR2(50),
-   contact_phone VARCHAR2(20)
-   );
+ CREATE TABLE TRIP (
+    trip_id NUMBER(10) PRIMARY KEY,
+    bus_id NUMBER(10) REFERENCES BUS(bus_id),
+    departure_place VARCHAR2(200),
+    destination_place VARCHAR2(200),
+    trip_date DATE,
+    departure_time VARCHAR2(10) 
+    );
 
 -- booking table creation
 CREATE TABLE BOOKING (
@@ -58,22 +59,15 @@ CREATE TABLE employees (
         CONSTRAINT pk_holiday PRIMARY KEY (holiday_id)
     );
 
--- Audit_log table creation
-CREATE TABLE audit_log (
-    audit_id NUMBER PRIMARY KEY,
-    table_name VARCHAR2(50) NOT NULL,
-    operation VARCHAR2(10) NOT NULL, -- 'INSERT', 'UPDATE', 'DELETE'
-    record_id NUMBER,
-    employee_id NUMBER,              -- Links to employees table
-    attempt_time TIMESTAMP DEFAULT SYSTIMESTAMP,
-    attempt_user VARCHAR2(100),      -- Database username
-    employee_name VARCHAR2(100),     -- Employee full name from employees table
-    attempt_status VARCHAR2(20) NOT NULL, -- 'SUCCESS', 'DENIED', 'ERROR'
-    error_message VARCHAR2(500),
-    ip_address VARCHAR2(50),
-    
-    CONSTRAINT fk_audit_employee FOREIGN KEY (employee_id) 
-        REFERENCES employees(employee_id) ON DELETE SET NULL
-);
--- Sequence for audit IDs
+-- peims_Audit_log table creation
+  CREATE TABLE PEIMS_AUDIT_LOG 
+   (LOG_ID NUMBER PRIMARY KEY, 
+	TABLE_NAME VARCHAR2(50), 
+	OPERATION VARCHAR2(20), 
+	USERNAME VARCHAR2(30), 
+	ACTION_STATUS VARCHAR2(20), 
+	ACTION_TIME DATE DEFAULT SYSDATE, 
+	REASON VARCHAR2(200)
+      );
+	 -- Sequence for audit IDs
 CREATE SEQUENCE audit_sequence START WITH 1 INCREMENT BY 1;
