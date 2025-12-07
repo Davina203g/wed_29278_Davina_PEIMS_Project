@@ -40,34 +40,40 @@ CREATE TABLE BOOKING (
    );
 
 -- Employees table creation
-  CREATE TABLE EMPLOYEES(	
-  EMPLOYEE_ID NUMBER PRIMARY KEY , 
-	USERNAME VARCHAR2(50) NOT NULL, 
-	POSITION VARCHAR2(50), 
-	EMAIL VARCHAR2(100), 
-	PHONE_NUMBER VARCHAR2(20)
-  );
+CREATE TABLE employees (
+        employee_id NUMBER,
+        username VARCHAR2(50) UNIQUE NOT NULL,
+        position VARCHAR2(50),
+        phone_number VARCHAR2(20),
+        Email VARCHAR2(100),
+        CONSTRAINT pk_employee PRIMARY KEY (employee_id)
+    );
+
 -- Holiday_calendar table creation
- CREATE TABLE HOLIDAY_CALENDAR 
-  (HOLIDAY_ID NUMBER PRIMARY KEY , 
-	HOLIDAY_NAME VARCHAR2(100) NOT NULL, 
-	HOLIDAY_DATE DATE NOT NULL, 
-	HOLIDAY_TYPE VARCHAR2(50)
-   );
+ CREATE TABLE holiday_calendar (
+        holiday_id NUMBER,
+        holiday_name VARCHAR2(100) NOT NULL,
+        holiday_date DATE NOT NULL,
+        holiday_type VARCHAR2(50),
+        CONSTRAINT pk_holiday PRIMARY KEY (holiday_id)
+    );
 
 -- Audit_log table creation
 CREATE TABLE audit_log (
-audit_id NUMBER PRIMARY KEY, 
-table_name VARCHAR (50) NOT NULL, 
-operation VARCHAR2(10) NOT NULL,
-record_id NUMBER,
-Emmployee_id NUMBER,
-attempt_time TIMESTAMP DEFAULT SYSTIMESTAMP, 
-attempt_user VARCHARZ (100), 
-employee_name VARCHAR2(100),
-attempt_status VARCHARZ(20) NOT NULL,
-error message VARCHAR2 (500), 
-ip_address VARCHAR (50),
-CONSTRAINT fk_audit_employee FOREIGN KEY (employee_id)
-REFERENCES employees (employee_id) ON DELETE SET NULL);
+    audit_id NUMBER PRIMARY KEY,
+    table_name VARCHAR2(50) NOT NULL,
+    operation VARCHAR2(10) NOT NULL, -- 'INSERT', 'UPDATE', 'DELETE'
+    record_id NUMBER,
+    employee_id NUMBER,              -- Links to employees table
+    attempt_time TIMESTAMP DEFAULT SYSTIMESTAMP,
+    attempt_user VARCHAR2(100),      -- Database username
+    employee_name VARCHAR2(100),     -- Employee full name from employees table
+    attempt_status VARCHAR2(20) NOT NULL, -- 'SUCCESS', 'DENIED', 'ERROR'
+    error_message VARCHAR2(500),
+    ip_address VARCHAR2(50),
+    
+    CONSTRAINT fk_audit_employee FOREIGN KEY (employee_id) 
+        REFERENCES employees(employee_id) ON DELETE SET NULL
+);
+-- Sequence for audit IDs
 CREATE SEQUENCE audit_sequence START WITH 1 INCREMENT BY 1;
