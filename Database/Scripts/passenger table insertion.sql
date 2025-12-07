@@ -1,4 +1,7 @@
 -- Insert into Passenger table
+INSERT INTO PASSENGER(passenger_id, full_name, national_id, phone_number) VALUES (1, 'Jean Muk', '100123456', '250788123456');
+INSERT INTO PASSENGER(passenger_id, full_name, national_id, phone_number) VALUES (2, 'Marie N', '100123457', '250788654321');
+INSERT INTO PASSENGER(passenger_id, full_name, national_id, phone_number) VALUES (3, 'Pierre K', '100123458', '250788999000');
 INSERT INTO PASSENGER(passenger_id, full_name, national_id, phone_number) VALUES (4, 'Francesco Uwimana', '119900004', '250788100004');
 INSERT INTO PASSENGER(passenger_id, full_name, national_id, phone_number) VALUES (5, 'Alessandro Mugisha', '119900005', '250788100005');
 INSERT INTO PASSENGER(passenger_id, full_name, national_id, phone_number) VALUES (6, 'Leonardo Niyonzima', '119900006', '250788100006');
