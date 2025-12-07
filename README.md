@@ -24,3 +24,10 @@ Emergency response is delayed due to missing, inaccurate, or disorganized data.
 - Deliver analytics & KPIs for decision-making  
 - Generate ERD, BPMN, dashboards & tests  
 
+## Quick Start
+ Prerequisites:
+ Oracle Database 21c
+ Docker container
+ SQL Developer
+ 
+ 
