@@ -32,7 +32,7 @@ Emergency response is delayed due to missing, inaccurate, or disorganized data.
 
  Link to database documentation and scripts:
  
- Database
+ https://github.com/Davina203g/wed_29278_Davina_PEIMS_Project/tree/e2e301e3a659ae6dc4e272f0149ab01acd146faa/Database
  
 Link to queries:
 
