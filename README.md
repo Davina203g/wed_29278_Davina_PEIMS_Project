@@ -36,7 +36,8 @@ Emergency response is delayed due to missing, inaccurate, or disorganized data.
  
 Link to queries:
 
-Queries
+https://github.com/Davina203g/wed_29278_Davina_PEIMS_Project/tree/3c855ef9d48f688674e55289c02751694debe845/Queries
 
 Link to database objects and test results screenshots:
+
 https://github.com/Davina203g/wed_29278_Davina_PEIMS_Project/tree/85da57b405b4f006db5c53f55f724443592e1c44/Screenshoots
