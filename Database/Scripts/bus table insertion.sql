@@ -1,4 +1,6 @@
 --inserting into bus table
+INSERT INTO BUS(bus_id, plate_number, driver_name, route) VALUES (1, 'RAB123', 'John Doe', 'Kigali - Gisenyi');
+INSERT INTO BUS(bus_id, plate_number, driver_name, route) VALUES (2, 'KGL456', 'Alice Bin', 'Kigali - Butare');
 INSERT INTO BUS(bus_id, plate_number, driver_name, route) VALUES (3, 'RAD001', 'Giovanni Ndayisenga', 'Kigali - Ruhengeri');
 INSERT INTO BUS(bus_id, plate_number, driver_name, route) VALUES (4, 'RAB002', 'Francesco Uwimana', 'Kigali - Kibuye');
 INSERT INTO BUS(bus_id, plate_number, driver_name, route) VALUES (5, 'KGL002', 'Alessandro Mugisha', 'Kigali - Cyangugu');
