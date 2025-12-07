@@ -30,7 +30,12 @@ Emergency response is delayed due to missing, inaccurate, or disorganized data.
  Docker container
  SQL Developer
 
- Links to documentation:
+ Link to database documentation and scripts:
  
  Database
  
+Link to queries:
+
+Queries
+
+Link to screenshots:
